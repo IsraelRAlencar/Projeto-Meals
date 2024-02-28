@@ -1,19 +1,22 @@
+// ignore_for_file: use_key_in_widget_constructors
+
 import 'package:flutter/material.dart';
 import '../models/category.dart';
 
 class CategoiresMealsScreen extends StatelessWidget {
-  final Category category;
-
-  const CategoiresMealsScreen(this.category, {super.key});
-
   @override
   Widget build(BuildContext context) {
+    final category = ModalRoute.of(context)?.settings.arguments as Category;
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text('As Receitas'),
+        title: Text(category.title),
       ),
-      body: const Center(
-        child: Text('Receitas por categoria'),
+      body: Center(
+        child: Text('Receitas por categoria ${category.id}',
+            style: TextStyle(
+              color: Theme.of(context).primaryColor,
+            )),
       ),
     );
   }
