@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import '../models/category.dart';
 
 class CategoiresMealsScreen extends StatelessWidget {
-  const CategoiresMealsScreen({super.key});
+  final Category category;
+
+  const CategoiresMealsScreen(this.category, {super.key});
 
   @override
   Widget build(BuildContext context) {
