@@ -3,6 +3,7 @@ import 'screens/categories_screen.dart';
 import 'screens/categories_meals_screen.dart';
 import 'utils/app_routes.dart';
 import 'screens/meal_detail_screen.dart';
+import 'screens/tabs_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -24,13 +25,12 @@ class MyApp extends StatelessWidget {
         ),
         textTheme: const TextTheme().copyWith(
           titleLarge: const TextStyle(
-            fontSize: 20,
-            fontFamily: 'RobotoCondensed',
-          ),
+              fontSize: 20, fontFamily: 'RobotoCondensed', color: Colors.black),
         ),
       ),
-      home: const CategoriesScreen(),
+      home: const TabsScreen(),
       routes: {
+        AppRoutes.HOME: (ctx) => const TabsScreen(),
         AppRoutes.CATEGORIES_MEALS: (ctx) => CategoiresMealsScreen(),
         AppRoutes.MEAL_DETAIL: (ctx) => const MealDetailScreen(),
       },
