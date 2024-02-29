@@ -14,13 +14,21 @@ class CategoiresMealsScreen extends StatelessWidget {
     }).toList();
 
     return Scaffold(
+      backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
-        title: Text(category.title),
+        title: Text(
+          category.title,
+          style: Theme.of(context).textTheme.titleLarge,
+        ),
+        backgroundColor: Theme.of(context).colorScheme.primary,
+        iconTheme: const IconThemeData(color: Colors.white),
       ),
       body: ListView.builder(
         itemCount: categoryMeals.length,
         itemBuilder: ((ctx, index) {
-          return MealItem(categoryMeals[index]);
+          return MealItem(
+            categoryMeals[index],
+          );
         }),
       ),
     );

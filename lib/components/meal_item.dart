@@ -18,6 +18,7 @@ class MealItem extends StatelessWidget {
     return InkWell(
       onTap: () => _selectMeal(context),
       child: Card(
+        surfaceTintColor: Colors.white,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
         elevation: 4,
         margin: const EdgeInsets.all(10),

@@ -37,9 +37,12 @@ class MealDetailScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           meal.title,
-          style: const TextStyle(color: Colors.black),
+          style: Theme.of(context).textTheme.titleLarge,
         ),
+        backgroundColor: Theme.of(context).colorScheme.primary,
+        iconTheme: const IconThemeData(color: Colors.white),
       ),
+      backgroundColor: Theme.of(context).colorScheme.background,
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -80,6 +83,8 @@ class MealDetailScreen extends StatelessWidget {
                     children: [
                       ListTile(
                         leading: CircleAvatar(
+                          backgroundColor:
+                              Theme.of(context).colorScheme.primary,
                           child: Text('${index + 1}'),
                         ),
                         title: Text(meal.steps[index]),

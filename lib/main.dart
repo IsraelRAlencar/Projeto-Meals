@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'screens/categories_screen.dart';
 import 'screens/categories_meals_screen.dart';
 import 'utils/app_routes.dart';
 import 'screens/meal_detail_screen.dart';
@@ -18,14 +17,18 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'DeliMeals',
       theme: theme.copyWith(
+        primaryColor: Colors.pink[400],
         colorScheme: ColorScheme.fromSwatch().copyWith(
-          primary: Colors.pink,
+          primary: Colors.pink[400],
           secondary: Colors.amber,
           background: const Color.fromRGBO(255, 254, 229, 1),
         ),
         textTheme: const TextTheme().copyWith(
           titleLarge: const TextStyle(
-              fontSize: 20, fontFamily: 'RobotoCondensed', color: Colors.black),
+            fontSize: 20,
+            fontFamily: 'RobotoCondensed',
+            color: Colors.white,
+          ),
         ),
       ),
       home: const TabsScreen(),
